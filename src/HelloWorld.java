@@ -57,6 +57,29 @@ public class HelloWorld {
         System.out.println("---------");
     }
 
+    private static void userStap(char[][] mat)
+    {
+        int x, y;
+        Scanner scan = new Scanner(System.in);
+        while (true) {
+            System.out.print("Enter the coordinates: ");
+            x = scan.nextInt();
+            y = scan.nextInt();
+            if(x > 0 && x < 4 && y > 0 && y < 4) {
+                if(mat[3 - y][x - 1] == ' ') {
+                    break;
+                }
+                else{
+                    System.out.println("This cell is occupied! Choose another one!");
+                }
+            }
+            else{
+                System.out.println("Coordinates should be from 1 to 3!");
+            }
+        }
+        mat[3 - y][x - 1] = 'X';
+    }
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter cells: ");
@@ -75,10 +98,7 @@ public class HelloWorld {
             }
         }
 
-        System.out.print("Enter the coordinates: ");
-        int x = scan.nextInt();
-        int y = scan.nextInt();
-        mat[3 - y][x - 1] = 'X';
+
         printMatrix(mat);
     }
 }
