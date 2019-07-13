@@ -273,6 +273,30 @@ public class HelloWorld {
                         printMatrix(mat);
                     } while (printSost(mat));
                     break;
+                case "start medium easy":
+                    printMatrix(mat);
+                    do {
+                        mediumLevel(mat, 'X');
+                        printMatrix(mat);
+                        if(!printSost(mat)){
+                            break;
+                        }
+                        easyLevel(mat, 'O');
+                        printMatrix(mat);
+                    } while (printSost(mat));
+                    break;
+                case "start easy medium":
+                    printMatrix(mat);
+                    do {
+                        easyLevel(mat, 'X');
+                        printMatrix(mat);
+                        if(!printSost(mat)){
+                            break;
+                        }
+                        mediumLevel(mat, 'O');
+                        printMatrix(mat);
+                    } while (printSost(mat));
+                    break;
                 case "exit":
                     return;
                     default:
