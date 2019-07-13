@@ -113,7 +113,7 @@ public class HelloWorld {
                     zero = j;
                 }
             }
-            if((schn == 2 || schNon == 2) &&  mat[zero][i] == ' '){
+            if((schn == 2 || schNon == 2) &&  mat[i][zero] == ' '){
                 mat[i][zero] = now;
                 return;
             }
