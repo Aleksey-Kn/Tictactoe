@@ -109,47 +109,51 @@ public class HelloWorld {
             type = scan.nextLine();
             switch (type) {
                 case "start user easy":
+                    printMatrix(mat);
                     do {
-                        printMatrix(mat);
                         userStap(mat, 'X');
                         printMatrix(mat);
                         if(!printSost(mat)){
                             break;
                         }
                         easyLevel(mat, 'O');
+                        printMatrix(mat);
                     } while (printSost(mat));
                     break;
                 case "start easy user":
+                    printMatrix(mat);
                     do {
-                        printMatrix(mat);
                         easyLevel(mat, 'X');
                         printMatrix(mat);
                         if(!printSost(mat)){
                             break;
                         }
                         userStap(mat, 'O');
+                        printMatrix(mat);
                     } while (printSost(mat));
                     break;
                 case "start user user":
+                    printMatrix(mat);
                     do {
-                        printMatrix(mat);
                         userStap(mat, 'X');
                         printMatrix(mat);
                         if(!printSost(mat)){
                             break;
                         }
                         userStap(mat, 'O');
+                        printMatrix(mat);
                     } while (printSost(mat));
                     break;
                 case "start easy easy":
+                    printMatrix(mat);
                     do {
-                        printMatrix(mat);
                         easyLevel(mat, 'X');
                         printMatrix(mat);
                         if(!printSost(mat)){
                             break;
                         }
                         easyLevel(mat, 'O');
+                        printMatrix(mat);
                     } while (printSost(mat));
                     break;
                 case "exit":
