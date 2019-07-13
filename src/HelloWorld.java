@@ -137,6 +137,7 @@ public class HelloWorld {
                 return;
             }
         }
+
         int schn = 0, schNon = 0, zero = 0;
         for(int i = 0; i < 3; i++) {//проверка главной диагонали
             if (mat[i][i] == now) {
