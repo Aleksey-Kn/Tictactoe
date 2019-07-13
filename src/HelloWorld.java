@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class HelloWorld {
     private static void printSost(char[][] mat){
@@ -80,6 +81,16 @@ public class HelloWorld {
         mat[3 - y][x - 1] = 'X';
     }
 
+    private static void easyLevel(char[][] mat){
+        Random rand = new Random();
+        int x, y;
+        do {
+            x = rand.nextInt(3);
+            y = rand.nextInt(3);
+        }while (mat[x][y] != ' ');
+        mat[x][y] = 'X';
+    }
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter cells: ");
@@ -97,8 +108,8 @@ public class HelloWorld {
                 mat[i][j] = str.charAt(w);
             }
         }
-
-
+        System.out.println("Making move level \"easy\"");
+        easyLevel(mat);
         printMatrix(mat);
     }
 }
