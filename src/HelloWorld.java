@@ -96,6 +96,87 @@ public class HelloWorld {
         mat[x][y] = now;
     }
 
+    private static void mediumLevel(char[][] mat, char now){
+        Random rand = new Random();
+        System.out.println("Making move level \"medium\"");
+        for(int i = 0, schn, schNon, zero = 0; i < 3; i++){// проверка горизонтали
+            schn = 0;
+            schNon = 0;
+            for(int j = 0; j < 3; j++){
+                if(mat[i][j] == now){
+                    schn++;
+                }
+                else if(mat[i][j] == (now == 'X'?'Y':'X')){
+                    schNon++;
+                }
+                else{
+                    zero = j;
+                }
+            }
+            if(schn == 2 || schNon == 2){
+                mat[i][zero] = now;
+                return;
+            }
+        }
+        for(int i = 0, schn, schNon, zero = 0; i < 3; i++){//проверка вертикали
+            schn = 0;
+            schNon = 0;
+            for(int j = 0; j < 3; j++){
+                if(mat[j][i] == now){
+                    schn++;
+                }
+                else if(mat[j][i] == (now == 'X'?'Y':'X')){
+                    schNon++;
+                }
+                else{
+                    zero = j;
+                }
+            }
+            if(schn == 2 || schNon == 2){
+                mat[zero][i] = now;
+                return;
+            }
+        }
+        int schn = 0, schNon = 0, zero = 0;
+        for(int i = 0; i < 3; i++) {//проверка главной диагонали
+            if (mat[i][i] == now) {
+                schn++;
+            } else if (mat[i][i] == (now == 'X' ? 'Y' : 'X')) {
+                schNon++;
+            } else {
+                zero = i;
+            }
+        }
+        if(schn == 2 || schNon == 2){
+            mat[zero][zero] = now;
+            return;
+        }
+
+        schn = 0;
+        schNon = 0;
+        zero = 0;
+        for(int i = 0; i < 3; i++) {//проверка побочной диагонали
+            if (mat[i][2 - i] == now) {
+                schn++;
+            } else if (mat[i][2 - i] == (now == 'X' ? 'Y' : 'X')) {
+                schNon++;
+            } else {
+                zero = i;
+            }
+        }
+        if(schn == 2 || schNon == 2){
+            mat[zero][2 - zero] = now;
+        }
+        else{//если нет выигрышных позиций
+            int x, y;
+            do {
+                x = rand.nextInt(3);
+                y = rand.nextInt(3);
+            }while (mat[x][y] != ' ');
+            mat[x][y] = now;
+        }
+    }
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String type;
@@ -153,6 +234,42 @@ public class HelloWorld {
                             break;
                         }
                         easyLevel(mat, 'O');
+                        printMatrix(mat);
+                    } while (printSost(mat));
+                    break;
+                case "start user medium":
+                    printMatrix(mat);
+                    do {
+                        userStap(mat, 'X');
+                        printMatrix(mat);
+                        if(!printSost(mat)){
+                            break;
+                        }
+                        mediumLevel(mat, 'O');
+                        printMatrix(mat);
+                    } while (printSost(mat));
+                    break;
+                case "start medium user":
+                    printMatrix(mat);
+                    do {
+                        mediumLevel(mat, 'X');
+                        printMatrix(mat);
+                        if(!printSost(mat)){
+                            break;
+                        }
+                        userStap(mat, 'O');
+                        printMatrix(mat);
+                    } while (printSost(mat));
+                    break;
+                case "start medium medium":
+                    printMatrix(mat);
+                    do {
+                        mediumLevel(mat, 'X');
+                        printMatrix(mat);
+                        if(!printSost(mat)){
+                            break;
+                        }
+                        mediumLevel(mat, 'O');
                         printMatrix(mat);
                     } while (printSost(mat));
                     break;
