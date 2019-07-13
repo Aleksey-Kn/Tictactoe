@@ -100,11 +100,11 @@ public class HelloWorld {
         Scanner scan = new Scanner(System.in);
         String type;
         char[][] mat = new char[3][3];
-        for(int i = 0; i < 3; i++){
-            Arrays.fill(mat[i], ' ');
-        }
 
         while(true) {
+            for(int i = 0; i < 3; i++){
+                Arrays.fill(mat[i], ' ');
+            }
             System.out.println("Input command: ");
             type = scan.nextLine();
             switch (type) {
