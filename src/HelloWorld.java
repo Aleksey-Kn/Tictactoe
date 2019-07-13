@@ -1,8 +1,9 @@
 import java.util.Scanner;
 import java.util.Random;
+import java.util.Arrays;
 
 public class HelloWorld {
-    private static void printSost(char[][] mat){
+    private static boolean printSost(char[][] mat){
         boolean owin = false;
         boolean xwin = false;
         for(int i = 0; i < 3; i++) {
@@ -30,19 +31,22 @@ public class HelloWorld {
                 }
             }
         }
-        if(x - 1 > o || o - 1 > x || xwin && owin){
+        /*if(x - 1 > o || o - 1 > x || xwin && owin){
             System.out.println("Impossible");
-        }
-        else if(!(xwin || owin)){
+        }*/
+        if(!(xwin || owin)){
             if(x + o == 9){
                 System.out.println("Draw");
+                return false;
             }
             else{
-                System.out.println("Game not finished");
+                //System.out.println("Game not finished");
+                return true;
             }
         }
         else{
             System.out.println(xwin ? "X wins": "O wins");
+            return false;
         }
     }
 
@@ -88,28 +92,20 @@ public class HelloWorld {
             x = rand.nextInt(3);
             y = rand.nextInt(3);
         }while (mat[x][y] != ' ');
-        mat[x][y] = 'X';
+        mat[x][y] = 'O';
     }
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Enter cells: ");
-        String str = scan.nextLine();
-        str = str.substring(1, 10);
-        System.out.println("---------");
-        System.out.println("| " + str.charAt(0) + " " + str.charAt(1) + " " + str.charAt(2) + " |");
-        System.out.println("| " + str.charAt(3) + " " + str.charAt(4) + " " + str.charAt(5) + " |");
-        System.out.println("| " + str.charAt(6) + " " + str.charAt(7) + " " + str.charAt(8) + " |");
-        System.out.println("---------");
         char[][] mat = new char[3][3];
-
-        for(int i = 0, w = 0; i < 3; i++){
-            for(int j = 0; j < 3; j++, w++) {
-                mat[i][j] = str.charAt(w);
-            }
+        for(int i = 0; i < 3; i++){
+            Arrays.fill(mat[i], ' ');
         }
-        System.out.println("Making move level \"easy\"");
-        easyLevel(mat);
-        printMatrix(mat);
+
+        do {
+            printMatrix(mat);
+            userStap(mat);
+            System.out.println("Making move level \"easy\"");
+            easyLevel(mat);
+        }while(printSost(mat));
     }
 }
