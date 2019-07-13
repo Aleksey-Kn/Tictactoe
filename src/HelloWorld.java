@@ -105,7 +105,7 @@ public class HelloWorld {
             for(int i = 0; i < 3; i++){
                 Arrays.fill(mat[i], ' ');
             }
-            System.out.println("Input command: ");
+            System.out.print("Input command: ");
             type = scan.nextLine();
             switch (type) {
                 case "start user easy":
