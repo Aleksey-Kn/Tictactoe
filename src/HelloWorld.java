@@ -82,7 +82,7 @@ public class HelloWorld {
                 System.out.println("Coordinates should be from 1 to 3!");
             }
         }
-        mat[3 - y][x - 1] = 'X';
+        mat[3 - y][x - 1] = now;
     }
 
     private static void easyLevel(char[][] mat, char now){
@@ -93,7 +93,7 @@ public class HelloWorld {
             x = rand.nextInt(3);
             y = rand.nextInt(3);
         }while (mat[x][y] != ' ');
-        mat[x][y] = 'O';
+        mat[x][y] = now;
     }
 
     public static void main(String[] args) {
