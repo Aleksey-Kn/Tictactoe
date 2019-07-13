@@ -113,7 +113,7 @@ public class HelloWorld {
                     zero = j;
                 }
             }
-            if(schn == 2 || schNon == 2){
+            if((schn == 2 || schNon == 2) && schn + schNon < 3){
                 mat[i][zero] = now;
                 return;
             }
@@ -132,7 +132,7 @@ public class HelloWorld {
                     zero = j;
                 }
             }
-            if(schn == 2 || schNon == 2){
+            if((schn == 2 || schNon == 2) && schn + schNon < 3){
                 mat[zero][i] = now;
                 return;
             }
@@ -147,7 +147,7 @@ public class HelloWorld {
                 zero = i;
             }
         }
-        if(schn == 2 || schNon == 2){
+        if((schn == 2 || schNon == 2) && schn + schNon < 3){
             mat[zero][zero] = now;
             return;
         }
@@ -164,7 +164,7 @@ public class HelloWorld {
                 zero = i;
             }
         }
-        if(schn == 2 || schNon == 2){
+        if((schn == 2 || schNon == 2) && schn + schNon < 3){
             mat[zero][2 - zero] = now;
         }
         else{//если нет выигрышных позиций
