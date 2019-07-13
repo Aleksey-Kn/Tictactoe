@@ -106,7 +106,7 @@ public class HelloWorld {
                 if(mat[i][j] == now){
                     schn++;
                 }
-                else if(mat[i][j] == (now == 'X'?'Y':'X')){
+                else if(mat[i][j] == (now == 'X'?'O':'X')){
                     schNon++;
                 }
                 else{
@@ -125,7 +125,7 @@ public class HelloWorld {
                 if(mat[j][i] == now){
                     schn++;
                 }
-                else if(mat[j][i] == (now == 'X'?'Y':'X')){
+                else if(mat[j][i] == (now == 'X'?'O':'X')){
                     schNon++;
                 }
                 else{
@@ -142,7 +142,7 @@ public class HelloWorld {
         for(int i = 0; i < 3; i++) {//проверка главной диагонали
             if (mat[i][i] == now) {
                 schn++;
-            } else if (mat[i][i] == (now == 'X' ? 'Y' : 'X')) {
+            } else if (mat[i][i] == (now == 'X' ? 'O' : 'X')) {
                 schNon++;
             } else {
                 zero = i;
@@ -159,7 +159,7 @@ public class HelloWorld {
         for(int i = 0; i < 3; i++) {//проверка побочной диагонали
             if (mat[i][2 - i] == now) {
                 schn++;
-            } else if (mat[i][2 - i] == (now == 'X' ? 'Y' : 'X')) {
+            } else if (mat[i][2 - i] == (now == 'X' ? 'O' : 'X')) {
                 schNon++;
             } else {
                 zero = i;
