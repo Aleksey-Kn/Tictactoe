@@ -62,7 +62,7 @@ public class HelloWorld {
         System.out.println("---------");
     }
 
-    private static void userStap(char[][] mat)
+    private static void userStap(char[][] mat, char now)
     {
         int x, y;
         Scanner scan = new Scanner(System.in);
@@ -85,8 +85,9 @@ public class HelloWorld {
         mat[3 - y][x - 1] = 'X';
     }
 
-    private static void easyLevel(char[][] mat){
+    private static void easyLevel(char[][] mat, char now){
         Random rand = new Random();
+        System.out.println("Making move level \"easy\"");
         int x, y;
         do {
             x = rand.nextInt(3);
@@ -96,16 +97,66 @@ public class HelloWorld {
     }
 
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String type;
         char[][] mat = new char[3][3];
         for(int i = 0; i < 3; i++){
             Arrays.fill(mat[i], ' ');
         }
 
-        do {
-            printMatrix(mat);
-            userStap(mat);
-            System.out.println("Making move level \"easy\"");
-            easyLevel(mat);
-        }while(printSost(mat));
+        while(true) {
+            System.out.println("Input command: ");
+            type = scan.nextLine();
+            switch (type) {
+                case "start user easy":
+                    do {
+                        printMatrix(mat);
+                        userStap(mat, 'X');
+                        printMatrix(mat);
+                        if(!printSost(mat)){
+                            break;
+                        }
+                        easyLevel(mat, 'O');
+                    } while (printSost(mat));
+                    break;
+                case "start easy user":
+                    do {
+                        printMatrix(mat);
+                        easyLevel(mat, 'X');
+                        printMatrix(mat);
+                        if(!printSost(mat)){
+                            break;
+                        }
+                        userStap(mat, 'O');
+                    } while (printSost(mat));
+                    break;
+                case "start user user":
+                    do {
+                        printMatrix(mat);
+                        userStap(mat, 'X');
+                        printMatrix(mat);
+                        if(!printSost(mat)){
+                            break;
+                        }
+                        userStap(mat, 'O');
+                    } while (printSost(mat));
+                    break;
+                case "start easy easy":
+                    do {
+                        printMatrix(mat);
+                        easyLevel(mat, 'X');
+                        printMatrix(mat);
+                        if(!printSost(mat)){
+                            break;
+                        }
+                        easyLevel(mat, 'O');
+                    } while (printSost(mat));
+                    break;
+                case "exit":
+                    return;
+                    default:
+                        System.out.println("Bed parameters");
+            }
+        }
     }
 }
