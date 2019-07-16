@@ -287,7 +287,7 @@ public class HelloWorld {
                 for(int j = 0; j < 3; j++){
                     if(mat[i][j] == ' '){
                         mat[i][j] = now;
-                        if(levelHard(mat, now == 'X'? 'O': 'X', -koef, false) == k){
+                        if(levelHard(mat, now == 'X'? 'O': 'X', -koef, false) == k * koef){
                             return koef * k;
                         }
                         mat[i][j] = ' ';
