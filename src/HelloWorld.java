@@ -178,17 +178,7 @@ public class HelloWorld {
         }
     }
 
-    private static int levelHard(char[][] pmat, char now, int koef ,boolean orig){
-        char[][] mat;
-        if(orig){
-            mat = pmat;
-        }
-        else {
-            mat = new char[3][3];
-            for(int i = 0; i < 3; i++){
-                mat[i] = pmat[i].clone();
-            }
-        }
+    private static int levelHard(char[][] mat, char now, int koef ,boolean orig){
         if(orig) {
             System.out.println("Making move level \"hard\"");
         }
@@ -207,9 +197,11 @@ public class HelloWorld {
                 }
             }
             if((schn == 2 || schNon == 2) &&  mat[i][zero] == ' '){
-                mat[i][zero] = now;
+                if(orig) {
+                    mat[i][zero] = now;
+                }
                 if (schn == 2) {
-                    return 1;
+                    return koef;
                 }
                 else {
                     return 0;
@@ -231,9 +223,11 @@ public class HelloWorld {
                 }
             }
             if((schn == 2 || schNon == 2) &&  mat[zero][i] == ' '){
-                mat[zero][i] = now;
+                if(orig) {
+                    mat[zero][i] = now;
+                }
                 if (schn == 2) {
-                    return 1;
+                    return koef;
                 }
                 else {
                     return 0;
@@ -251,9 +245,11 @@ public class HelloWorld {
             }
         }
         if((schn == 2 || schNon == 2) &&  mat[zero][zero] == ' '){
-            mat[zero][zero] = now;
+            if(orig) {
+                mat[zero][zero] = now;
+            }
             if (schn == 2) {
-                return 1;
+                return koef;
             }
             else {
                 return 0;
@@ -273,50 +269,45 @@ public class HelloWorld {
             }
         }
         if((schn == 2 || schNon == 2) &&  mat[zero][2 - zero] == ' '){
-            mat[zero][2 - zero] = now;
+            if(orig) {
+                mat[zero][2 - zero] = now;
+            }
             if (schn == 2) {
-                return 1;
+                return koef;
             }
             else {
                 return 0;
             }
         }
 
-        for (int k = 1; k >= 0; k--){
+        boolean flag = false;
+        int sum = 0, mi = 0, mj = 0, max = -1;//вероятность выигрыша той или иной стороны при данном ходе и координаты наиболее удачного
+        for (int k = 1, temp; k >= 0; k--){
             for(int i = 0; i < 3; i++){
                 for(int j = 0; j < 3; j++){
                     if(mat[i][j] == ' '){
+                        flag = true;
                         mat[i][j] = now;
-                        if(levelHard(mat, now == 'X'? 'O': 'X', -koef, false) == k * koef){
-                            return koef * k;
+                        temp = levelHard(mat, now == 'X'? 'O': 'X', -koef, false);
+                        if (max * koef <= temp * koef){
+                            mi = i;
+                            mj = j;
+                            max = temp;
                         }
+                        sum += temp;
                         mat[i][j] = ' ';
                     }
                 }
             }
         }
-
-        boolean flag = true;
-        for (int i = 0; i < 3 && flag; i++){
-            for(int j = 0; j < 3; j++){
-                if(mat[i][j] == ' '){
-                    flag = false;
-                    break;
-                }
+        if (flag) {
+            if(orig) {
+                mat[mi][mj] = now; // совершаем наиболее удачный ход
             }
+            return sum; //возвращаем удачность хода при различных исходах
         }
-        if(flag){
+        else
             return 0;
-        }
-        //если есть только проигрышные позици
-        Random rand = new Random();
-        int x, y;
-        do {
-            x = rand.nextInt(3);
-            y = rand.nextInt(3);
-        }while (mat[x][y] != ' ');
-        mat[x][y] = now;
-        return -koef;
     }
 
     public static void main(String[] args) {
