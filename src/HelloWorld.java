@@ -178,6 +178,147 @@ public class HelloWorld {
         }
     }
 
+    private static int levelHard(char[][] pmat, char now, int koef ,boolean orig){
+        char[][] mat;
+        if(orig){
+            mat = pmat;
+        }
+        else {
+            mat = new char[3][3];
+            for(int i = 0; i < 3; i++){
+                mat[i] = pmat[i].clone();
+            }
+        }
+        if(orig) {
+            System.out.println("Making move level \"hard\"");
+        }
+        for(int i = 0, schn, schNon, zero = 0; i < 3; i++){// проверка горизонтали
+            schn = 0;
+            schNon = 0;
+            for(int j = 0; j < 3; j++){
+                if(mat[i][j] == now){
+                    schn++;
+                }
+                else if(mat[i][j] == (now == 'X'?'O':'X')){
+                    schNon++;
+                }
+                else{
+                    zero = j;
+                }
+            }
+            if((schn == 2 || schNon == 2) &&  mat[i][zero] == ' '){
+                mat[i][zero] = now;
+                if (schn == 2) {
+                    return 1;
+                }
+                else {
+                    return  -1;
+                }
+            }
+        }
+        for(int i = 0, schn, schNon, zero = 0; i < 3; i++){//проверка вертикали
+            schn = 0;
+            schNon = 0;
+            for(int j = 0; j < 3; j++){
+                if(mat[j][i] == now){
+                    schn++;
+                }
+                else if(mat[j][i] == (now == 'X'?'O':'X')){
+                    schNon++;
+                }
+                else{
+                    zero = j;
+                }
+            }
+            if((schn == 2 || schNon == 2) &&  mat[zero][i] == ' '){
+                mat[zero][i] = now;
+                if (schn == 2) {
+                    return 1;
+                }
+                else {
+                    return  -1;
+                }            }
+        }
+
+        int schn = 0, schNon = 0, zero = 0;
+        for(int i = 0; i < 3; i++) {//проверка главной диагонали
+            if (mat[i][i] == now) {
+                schn++;
+            } else if (mat[i][i] == (now == 'X' ? 'O' : 'X')) {
+                schNon++;
+            } else {
+                zero = i;
+            }
+        }
+        if((schn == 2 || schNon == 2) &&  mat[zero][zero] == ' '){
+            mat[zero][zero] = now;
+            if (schn == 2) {
+                return 1;
+            }
+            else {
+                return  -1;
+            }
+        }
+
+        schn = 0;
+        schNon = 0;
+        zero = 0;
+        for(int i = 0; i < 3; i++) {//проверка побочной диагонали
+            if (mat[i][2 - i] == now) {
+                schn++;
+            } else if (mat[i][2 - i] == (now == 'X' ? 'O' : 'X')) {
+                schNon++;
+            } else {
+                zero = i;
+            }
+        }
+        if((schn == 2 || schNon == 2) &&  mat[zero][2 - zero] == ' '){
+            mat[zero][2 - zero] = now;
+            if (schn == 2) {
+                return 1;
+            }
+            else {
+                return  -1;
+            }
+        }
+
+        for (int k = 1; k >= 0; k--){
+            for(int i = 0; i < 3; i++){
+                for(int j = 0; j < 3; j++){
+                    if(mat[i][j] == ' '){
+                        mat[i][j] = now;
+                        if(levelHard(mat, now == 'X'? 'O': 'X', -koef, false) == k){
+                            return koef * k;
+                        }
+                        mat[i][j] = ' ';
+                    }
+                }
+            }
+        }
+
+        boolean flag = true;
+        for (int i = 0; i < 3 && flag; i++){
+            for(int j = 0; j < 3; j++){
+                if(mat[i][j] == ' '){
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        if(flag){
+            return 0;
+        }
+        //если есть только проигрышные позици
+        Random rand = new Random();
+        int x, y;
+        do {
+            x = rand.nextInt(3);
+            y = rand.nextInt(3);
+        }while (mat[x][y] != ' ');
+        mat[x][y] = now;
+        return -koef;
+    }
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String type;
@@ -295,6 +436,90 @@ public class HelloWorld {
                             break;
                         }
                         mediumLevel(mat, 'O');
+                        printMatrix(mat);
+                    } while (printSost(mat));
+                    break;
+                case "start user hard":
+                    printMatrix(mat);
+                    do {
+                        userStap(mat, 'X');
+                        printMatrix(mat);
+                        if(!printSost(mat)){
+                            break;
+                        }
+                        levelHard(mat, 'O', 1, true);
+                        printMatrix(mat);
+                    } while (printSost(mat));
+                    break;
+                case "start hard user":
+                    printMatrix(mat);
+                    do {
+                        levelHard(mat, 'X', 1, true);
+                        printMatrix(mat);
+                        if(!printSost(mat)){
+                            break;
+                        }
+                        userStap(mat, 'O');
+                        printMatrix(mat);
+                    } while (printSost(mat));
+                    break;
+                case "start hard hard":
+                    printMatrix(mat);
+                    do {
+                        levelHard(mat, 'X', 1, true);
+                        printMatrix(mat);
+                        if(!printSost(mat)){
+                            break;
+                        }
+                        levelHard(mat, 'O', 1, true);
+                        printMatrix(mat);
+                    } while (printSost(mat));
+                    break;
+                case "start hard easy":
+                    printMatrix(mat);
+                    do {
+                        levelHard(mat, 'X', 1, true);
+                        printMatrix(mat);
+                        if(!printSost(mat)){
+                            break;
+                        }
+                        easyLevel(mat, 'O');
+                        printMatrix(mat);
+                    } while (printSost(mat));
+                    break;
+                case "start hard medium":
+                    printMatrix(mat);
+                    do {
+                        levelHard(mat, 'X', 1, true);
+                        printMatrix(mat);
+                        if(!printSost(mat)){
+                            break;
+                        }
+                        mediumLevel(mat, 'O');
+                        printMatrix(mat);
+                    } while (printSost(mat));
+                    break;
+                case "start easy hard":
+                    printMatrix(mat);
+                    do {
+                        easyLevel(mat, 'X');
+                        printMatrix(mat);
+                        if(!printSost(mat)){
+                            break;
+                        }
+                        levelHard(mat, 'O', 1, true);
+                        printMatrix(mat);
+                    } while (printSost(mat));
+                    break;
+                case "start medium hard":
+                    printMatrix(mat);
+                    do {
+                        mediumLevel(mat, 'X');
+                        printMatrix(mat);
+                        if(!printSost(mat)){
+                            break;
+                        }
+                        levelHard(mat, 'O', 1, true);
                         printMatrix(mat);
                     } while (printSost(mat));
                     break;
