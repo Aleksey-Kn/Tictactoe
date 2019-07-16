@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="abbcae18-cc47-4070-973f-de28d53a41d2" name="Default Changelist" comment="">
+    <list default="true" id="abbcae18-cc47-4070-973f-de28d53a41d2" name="Default Changelist" comment="Relise medium level">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyProgect/HelloWorld.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyProgect/HelloWorld.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HelloWorld.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HelloWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="155" column="41" selection-start-line="155" selection-start-column="41" selection-end-line="155" selection-end-column="41" />
+            <state relative-caret-position="2963">
+              <caret line="447" column="52" selection-start-line="447" selection-start-column="52" selection-end-line="447" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,6 +49,12 @@
       </list>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="11" />
     <option name="y" value="21" />
@@ -60,10 +67,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Course" />
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Course" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -160,14 +167,91 @@
       <option name="project" value="LOCAL" />
       <updated>1563014940117</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Bagfix with output matrix">
+      <created>1563017795803</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1563017795803</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Relise medium level">
+      <created>1563023642414</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1563023642414</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Bagfix overwrite occupied cell">
+      <created>1563024741851</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1563024741851</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Bugfix with rewrite">
+      <created>1563025280196</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1563025280196</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Bugfix">
+      <created>1563025889836</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1563025889836</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add easy-medium and medium-easy">
+      <created>1563026166698</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1563026166698</updated>
+    </task>
+    <task id="LOCAL-00014" summary="End version">
+      <created>1563032211276</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1563032211276</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Bugfix with num of symbols">
+      <created>1563035293693</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1563035293693</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Relise hard level">
+      <created>1563295109680</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1563295109680</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Update hard level">
+      <created>1563297258171</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1563297258171</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Update hard">
+      <created>1563301490874</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1563301490874</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25037822" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2730711" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -176,21 +260,21 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.86252046" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.90016365" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3289689" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3289689" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50075644" side_tool="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49924356" weight="0.3289689" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3289689" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.32980332" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
@@ -204,7 +288,18 @@
     <MESSAGE value="Bagfix with print symbol" />
     <MESSAGE value="Bagfix with field reset" />
     <MESSAGE value="Bagfix with output" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bagfix with output" />
+    <MESSAGE value="Bagfix with output matrix" />
+    <MESSAGE value="Relise medium level" />
+    <MESSAGE value="Bagfix overwrite occupied cell" />
+    <MESSAGE value="Bugfix with rewrite" />
+    <MESSAGE value="Bugfix" />
+    <MESSAGE value="Add easy-medium and medium-easy" />
+    <MESSAGE value="End version" />
+    <MESSAGE value="Bugfix with num of symbols" />
+    <MESSAGE value="Relise hard level" />
+    <MESSAGE value="Update hard level" />
+    <MESSAGE value="Update hard" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update hard" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -213,8 +308,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/HelloWorld.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="155" column="41" selection-start-line="155" selection-start-column="41" selection-end-line="155" selection-end-column="41" />
+        <state relative-caret-position="2963">
+          <caret line="447" column="52" selection-start-line="447" selection-start-column="52" selection-end-line="447" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
