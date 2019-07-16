@@ -209,7 +209,7 @@ public class HelloWorld {
             if((schn == 2 || schNon == 2) &&  mat[i][zero] == ' '){
                 mat[i][zero] = now;
                 if (schn == 2) {
-                    return 1;
+                    return koef;
                 }
                 else {
                     return 0;
@@ -233,11 +233,12 @@ public class HelloWorld {
             if((schn == 2 || schNon == 2) &&  mat[zero][i] == ' '){
                 mat[zero][i] = now;
                 if (schn == 2) {
-                    return 1;
+                    return koef;
                 }
                 else {
                     return 0;
-                }            }
+                }
+            }
         }
 
         int schn = 0, schNon = 0, zero = 0;
@@ -253,7 +254,7 @@ public class HelloWorld {
         if((schn == 2 || schNon == 2) &&  mat[zero][zero] == ' '){
             mat[zero][zero] = now;
             if (schn == 2) {
-                return 1;
+                return koef;
             }
             else {
                 return 0;
@@ -275,7 +276,7 @@ public class HelloWorld {
         if((schn == 2 || schNon == 2) &&  mat[zero][2 - zero] == ' '){
             mat[zero][2 - zero] = now;
             if (schn == 2) {
-                return 1;
+                return koef;
             }
             else {
                 return 0;
@@ -288,7 +289,7 @@ public class HelloWorld {
                     if(mat[i][j] == ' '){
                         mat[i][j] = now;
                         if(levelHard(mat, now == 'X'? 'O': 'X', -koef, false) == k * koef){
-                            return koef * k;
+                            return k * koef;
                         }
                         mat[i][j] = ' ';
                     }
