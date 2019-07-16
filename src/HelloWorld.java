@@ -283,18 +283,16 @@ public class HelloWorld {
             }
         }
 
-        for (int k = 1; k >= 0; k--){
-            for(int i = 0; i < 3; i++){
-                for(int j = 0; j < 3; j++){
-                    if(mat[i][j] == ' '){
+        for(int i = 0; i < 3; i++){
+                for(int j = 0; j < 3; j++) {
+                    if (mat[i][j] == ' ') {
                         mat[i][j] = now;
-                        if(levelHard(mat, now == 'X'? 'O': 'X', -koef, false) == k * koef){
-                            return k * koef;
+                        if (levelHard(mat, now == 'X' ? 'O' : 'X', -koef, false) == koef) {
+                            return koef;
                         }
                         mat[i][j] = ' ';
                     }
                 }
-            }
         }
 
         boolean flag = true;
