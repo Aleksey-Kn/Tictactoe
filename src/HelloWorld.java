@@ -281,6 +281,9 @@ public class HelloWorld {
             }
             if(schNon == 2 &&  mat[i][zero] == ' '){
                 mat[i][zero] = now;
+                if(!orig){
+                    return levelHard(mat, now == 'X'? 'Y':'X', -koef, false);
+                }
                 return 0;
             }
         }
@@ -301,6 +304,9 @@ public class HelloWorld {
             }
             if(schNon == 2 &&  mat[zero][i] == ' '){
                 mat[zero][i] = now;
+                if(!orig){
+                    return levelHard(mat, now == 'X'? 'Y':'X', -koef, false);
+                }
                 return 0;
             }
         }
@@ -319,6 +325,9 @@ public class HelloWorld {
         }
         if(schNon == 2 &&  mat[zero][zero] == ' '){
             mat[zero][zero] = now;
+            if(!orig){
+                return levelHard(mat, now == 'X'? 'Y':'X', -koef, false);
+            }
             return 0;
         }
 
@@ -336,6 +345,9 @@ public class HelloWorld {
         }
         if(schNon == 2 &&  mat[zero][2 - zero] == ' '){
             mat[zero][2 - zero] = now;
+            if(!orig){
+                return levelHard(mat, now == 'X'? 'Y':'X', -koef, false);
+            }
             return 0;
         }
 
