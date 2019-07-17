@@ -192,6 +192,7 @@ public class HelloWorld {
         if(orig) {
             System.out.println("Making move level \"hard\"");
         }
+
         for(int i = 0, schn, schNon, zero = 0; i < 3; i++){// проверка горизонтали
             schn = 0;
             schNon = 0;
@@ -206,14 +207,9 @@ public class HelloWorld {
                     zero = j;
                 }
             }
-            if((schn == 2 || schNon == 2) &&  mat[i][zero] == ' '){
+            if(schn == 2 &&  mat[i][zero] == ' '){
                 mat[i][zero] = now;
-                if (schn == 2) {
-                    return koef;
-                }
-                else {
-                    return 0;
-                }
+                return koef;
             }
         }
         for(int i = 0, schn, schNon, zero = 0; i < 3; i++){//проверка вертикали
@@ -230,14 +226,9 @@ public class HelloWorld {
                     zero = j;
                 }
             }
-            if((schn == 2 || schNon == 2) &&  mat[zero][i] == ' '){
+            if(schn == 2 &&  mat[zero][i] == ' '){
                 mat[zero][i] = now;
-                if (schn == 2) {
-                    return koef;
-                }
-                else {
-                    return 0;
-                }
+                return koef;
             }
         }
 
@@ -251,14 +242,9 @@ public class HelloWorld {
                 zero = i;
             }
         }
-        if((schn == 2 || schNon == 2) &&  mat[zero][zero] == ' '){
+        if(schn == 2 &&  mat[zero][zero] == ' '){
             mat[zero][zero] = now;
-            if (schn == 2) {
-                return koef;
-            }
-            else {
-                return 0;
-            }
+            return koef;
         }
 
         schn = 0;
@@ -273,14 +259,84 @@ public class HelloWorld {
                 zero = i;
             }
         }
-        if((schn == 2 || schNon == 2) &&  mat[zero][2 - zero] == ' '){
+        if(schn == 2 &&  mat[zero][2 - zero] == ' '){
             mat[zero][2 - zero] = now;
-            if (schn == 2) {
-                return koef;
+            return koef;
+        }
+
+        for(int i = 0; i < 3; i++){// проверка горизонтали
+            schn = 0;
+            schNon = 0;
+            zero = 0;
+            for(int j = 0; j < 3; j++){
+                if(mat[i][j] == now){
+                    schn++;
+                }
+                else if(mat[i][j] == (now == 'X'?'O':'X')){
+                    schNon++;
+                }
+                else{
+                    zero = j;
+                }
             }
-            else {
+            if(schNon == 2 &&  mat[i][zero] == ' '){
+                mat[i][zero] = now;
                 return 0;
             }
+        }
+        for(int i = 0; i < 3; i++){//проверка вертикали
+            schn = 0;
+            schNon = 0;
+            zero = 0;
+            for(int j = 0; j < 3; j++){
+                if(mat[j][i] == now){
+                    schn++;
+                }
+                else if(mat[j][i] == (now == 'X'?'O':'X')){
+                    schNon++;
+                }
+                else{
+                    zero = j;
+                }
+            }
+            if(schNon == 2 &&  mat[zero][i] == ' '){
+                mat[zero][i] = now;
+                return 0;
+            }
+        }
+
+        schn = 0;
+        schNon = 0;
+        zero = 0;
+        for(int i = 0; i < 3; i++) {//проверка главной диагонали
+            if (mat[i][i] == now) {
+                schn++;
+            } else if (mat[i][i] == (now == 'X' ? 'O' : 'X')) {
+                schNon++;
+            } else {
+                zero = i;
+            }
+        }
+        if(schNon == 2 &&  mat[zero][zero] == ' '){
+            mat[zero][zero] = now;
+            return 0;
+        }
+
+        schn = 0;
+        schNon = 0;
+        zero = 0;
+        for(int i = 0; i < 3; i++) {//проверка побочной диагонали
+            if (mat[i][2 - i] == now) {
+                schn++;
+            } else if (mat[i][2 - i] == (now == 'X' ? 'O' : 'X')) {
+                schNon++;
+            } else {
+                zero = i;
+            }
+        }
+        if(schNon == 2 &&  mat[zero][2 - zero] == ' '){
+            mat[zero][2 - zero] = now;
+            return 0;
         }
 
         for(int i = 0; i < 3; i++){
