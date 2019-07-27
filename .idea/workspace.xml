@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="abbcae18-cc47-4070-973f-de28d53a41d2" name="Default Changelist" comment="Relise medium level">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyProgect/HelloWorld.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyProgect/HelloWorld.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HelloWorld.java" afterDir="false" />
-    </list>
+    <list default="true" id="abbcae18-cc47-4070-973f-de28d53a41d2" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HelloWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2963">
-              <caret line="447" column="52" selection-start-line="447" selection-start-column="52" selection-end-line="447" selection-end-column="52" />
+            <state relative-caret-position="367">
+              <caret line="385" column="34" selection-start-line="385" selection-start-column="34" selection-end-line="385" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -41,6 +37,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="374b66e44a015f9afc410cef72aef156ca76645e" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -167,91 +168,49 @@
       <option name="project" value="LOCAL" />
       <updated>1563014940117</updated>
     </task>
-    <task id="LOCAL-00008" summary="Bagfix with output matrix">
-      <created>1563017795803</created>
+    <task id="LOCAL-00008" summary="Update hard">
+      <created>1563308200107</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1563017795803</updated>
+      <updated>1563308200107</updated>
     </task>
-    <task id="LOCAL-00009" summary="Relise medium level">
-      <created>1563023642414</created>
+    <task id="LOCAL-00009" summary="Best hard">
+      <created>1563310959496</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1563023642414</updated>
+      <updated>1563310959496</updated>
     </task>
-    <task id="LOCAL-00010" summary="Bagfix overwrite occupied cell">
-      <created>1563024741851</created>
+    <task id="LOCAL-00010" summary="New best hard">
+      <created>1563349674678</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1563024741851</updated>
+      <updated>1563349674678</updated>
     </task>
-    <task id="LOCAL-00011" summary="Bugfix with rewrite">
-      <created>1563025280196</created>
+    <task id="LOCAL-00011" summary="New cycle best hard">
+      <created>1563350714394</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1563025280196</updated>
+      <updated>1563350714394</updated>
     </task>
-    <task id="LOCAL-00012" summary="Bugfix">
-      <created>1563025889836</created>
+    <task id="LOCAL-00012" summary="Added new checks to improve quality">
+      <created>1563383930752</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1563025889836</updated>
+      <updated>1563383930752</updated>
     </task>
-    <task id="LOCAL-00013" summary="Add easy-medium and medium-easy">
-      <created>1563026166698</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1563026166698</updated>
-    </task>
-    <task id="LOCAL-00014" summary="End version">
-      <created>1563032211276</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1563032211276</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Bugfix with num of symbols">
-      <created>1563035293693</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1563035293693</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Relise hard level">
-      <created>1563295109680</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1563295109680</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Update hard level">
-      <created>1563297258171</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1563297258171</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Update hard">
-      <created>1563301490874</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1563301490874</updated>
-    </task>
-    <option name="localTasksCounter" value="19" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2730711" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30030257" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -280,6 +239,81 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add check for input data" />
     <MESSAGE value="Realised easy level" />
@@ -288,18 +322,12 @@
     <MESSAGE value="Bagfix with print symbol" />
     <MESSAGE value="Bagfix with field reset" />
     <MESSAGE value="Bagfix with output" />
-    <MESSAGE value="Bagfix with output matrix" />
-    <MESSAGE value="Relise medium level" />
-    <MESSAGE value="Bagfix overwrite occupied cell" />
-    <MESSAGE value="Bugfix with rewrite" />
-    <MESSAGE value="Bugfix" />
-    <MESSAGE value="Add easy-medium and medium-easy" />
-    <MESSAGE value="End version" />
-    <MESSAGE value="Bugfix with num of symbols" />
-    <MESSAGE value="Relise hard level" />
-    <MESSAGE value="Update hard level" />
     <MESSAGE value="Update hard" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update hard" />
+    <MESSAGE value="Best hard" />
+    <MESSAGE value="New best hard" />
+    <MESSAGE value="New cycle best hard" />
+    <MESSAGE value="Added new checks to improve quality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new checks to improve quality" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -308,8 +336,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/HelloWorld.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2963">
-          <caret line="447" column="52" selection-start-line="447" selection-start-column="52" selection-end-line="447" selection-end-column="52" />
+        <state relative-caret-position="367">
+          <caret line="385" column="34" selection-start-line="385" selection-start-column="34" selection-end-line="385" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
