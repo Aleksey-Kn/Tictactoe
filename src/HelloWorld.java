@@ -178,7 +178,17 @@ public class HelloWorld {
         }
     }
 
-    private static int levelHard(char[][] mat, char now, int koef ,boolean orig){
+    private static int levelHard(char[][] pmat, char now, int koef ,boolean orig){
+        char[][] mat;
+        if(orig){
+            mat = pmat;
+        }
+        else {
+            mat = new char[3][3];
+            for(int i = 0; i < 3; i++){
+                mat[i] = pmat[i].clone();
+            }
+        }
         if(orig) {
             System.out.println("Making move level \"hard\"");
         }
@@ -349,20 +359,33 @@ public class HelloWorld {
                         if (levelHard(mat, now == 'X' ? 'O' : 'X', -koef, false) == koef * k) {
                             return koef * k;
                         }
-                        sum += temp;
                         mat[i][j] = ' ';
                     }
                 }
             }
         }
-        if (flag) {
-            if(orig) {
-                mat[mi][mj] = now; // совершаем наиболее удачный ход
+
+        boolean flag = true;
+        for (int i = 0; i < 3 && flag; i++){
+            for(int j = 0; j < 3; j++){
+                if(mat[i][j] == ' '){
+                    flag = false;
+                    break;
+                }
             }
-            return sum; //возвращаем удачность хода при различных исходах
         }
-        else
+        if(flag){
             return 0;
+        }
+        //если есть только проигрышные позици
+        Random rand = new Random();
+        int x, y;
+        do {
+            x = rand.nextInt(3);
+            y = rand.nextInt(3);
+        }while (mat[x][y] != ' ');
+        mat[x][y] = now;
+        return -koef;
     }
 
     public static void main(String[] args) {
@@ -571,8 +594,8 @@ public class HelloWorld {
                     break;
                 case "exit":
                     return;
-                    default:
-                        System.out.println("Bed parameters");
+                default:
+                    System.out.println("Bed parameters");
             }
         }
     }
